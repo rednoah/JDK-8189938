@@ -19,3 +19,6 @@ ant clean appx install
 JDK8189938
 ```
 
+
+
+![Screenshot](https://raw.githubusercontent.com/rednoah/JDK-8189938/master/screenshot.png)
