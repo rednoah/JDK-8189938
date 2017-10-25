@@ -19,6 +19,6 @@ ant clean appx install
 JDK8189938
 ```
 
-
+This will launch the sample application via the UWP Desktop Bridge. Clicking on `Select File` should open a `JFileChooser` window but instead deadlocks the EDT and freezes the application.
 
 ![Screenshot](https://raw.githubusercontent.com/rednoah/JDK-8189938/master/screenshot.png)
