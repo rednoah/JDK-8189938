@@ -15,7 +15,7 @@
 
 	<target name="appx" depends="build">
 		<copy todir="dist/appx">
-			<fileset dir="appx" includes="*.cmd, *.xml, **/*.png" />
+			<fileset dir="appx" includes="*.exe, *.xml, **/*.png" />
 		</copy>
 
 		<!-- fetch JRE -->
@@ -33,7 +33,7 @@
 			<arg line="Get-AppxPackage JDK8189938 | Remove-AppxPackage" />
 		</exec>
 		<exec executable="powershell">
-			<arg line="Add-AppxPackage -Register dist/appx" />
+			<arg line="Add-AppxPackage -Register dist/appx/AppxManifest.xml" />
 		</exec>
 	</target>
 
