@@ -1,1 +1,1 @@
-jre/bin/java -jar main.jar
+"jre/bin/java" -jar main.jar
