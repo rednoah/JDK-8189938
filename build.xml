@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project name="JDK-8189938" default="appx">
+
+	<target name="build">
+		<javac srcdir="src" destdir="bin" target="9" source="9" encoding="UTF-8" includeAntRuntime="false" />
+
+		<jar destfile="dist/appx/main.jar">
+			<fileset dir="bin" />
+			<manifest>
+				<attribute name="Main-Class" value="jdk.bug8189938.Main" />
+			</manifest>
+		</jar>
+	</target>
+
+
+	<target name="appx" depends="build">
+		<copy todir="dist/appx">
+			<fileset dir="appx" includes="*.cmd, *.xml, **/*.png" />
+		</copy>
+
+		<!-- fetch JRE -->
+		<exec executable="powershell">
+			<arg line="${basedir}/appx/get-java.ps1" />
+		</exec>
+		<untar src="jre-9.0.1_windows-x64_bin.tar.gz" dest="dist/appx/jre" compression="gzip">
+			<cutdirsmapper dirs="1" />
+		</untar>
+	</target>
+
+
+	<target name="install">
+		<exec executable="powershell">
+			<arg line="Get-AppxPackage JDK8189938 | Remove-AppxPackage" />
+		</exec>
+		<exec executable="powershell">
+			<arg line="Add-AppxPackage -Register dist/appx" />
+		</exec>
+	</target>
+
+
+
+
+
+
+	<target name="clean">
+		<delete dir="bin" />
+		<delete dir="dist/appx" />
+
+		<mkdir dir="bin" />
+		<mkdir dir="dist/appx" />
+	</target>
+
+</project>

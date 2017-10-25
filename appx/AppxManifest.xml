@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
+	<Identity Name="JDK8189938" ProcessorArchitecture="x64" Publisher="CN=Test" Version="1.0.0.0" />
+	<Properties>
+		<DisplayName>JDK-8189938</DisplayName>
+		<PublisherDisplayName>CN=Test</PublisherDisplayName>
+		<Logo>Assets\SampleAppx.150x150.png</Logo>
+	</Properties>
+	<Resources>
+		<Resource Language="en-us" />
+	</Resources>
+	<Dependencies>
+		<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351" />
+	</Dependencies>
+	<Capabilities>
+		<rescap:Capability Name="runFullTrust" />
+	</Capabilities>
+	<Applications>
+		<Application Id="JDK8189938" Executable="launcher.cmd" EntryPoint="Windows.FullTrustApplication">
+			<uap:VisualElements DisplayName="JDK-8189938" Description="JDK-8189938" BackgroundColor="transparent" Square150x150Logo="Assets\SampleAppx.150x150.png" Square44x44Logo="Assets\SampleAppx.44x44.png"/>
+			<Extensions>
+				<uap3:Extension Category="windows.appExecutionAlias" Executable="launcher.cmd" EntryPoint="Windows.FullTrustApplication">
+					<uap3:AppExecutionAlias>
+						<desktop:ExecutionAlias Alias="JDK8189938.exe" />
+					</uap3:AppExecutionAlias>
+				</uap3:Extension>
+			</Extensions>
+		</Application>
+	</Applications>
+</Package>
