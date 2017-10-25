@@ -6,6 +6,7 @@ Exception in thread "Swing-Shell" java.lang.InternalError: Could not initialize 
 ```bash
 # Clone code
 git clone https://github.com/rednoah/JDK-8189938.git
+cd JDK-8189938
 ```
 
 ```bash
