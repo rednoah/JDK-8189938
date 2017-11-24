@@ -1,6 +1,15 @@
 # [JDK-8189938](https://bugs.openjdk.java.net/browse/JDK-8189938)
 Exception in thread "Swing-Shell" java.lang.InternalError: Could not initialize COM: HRESULT=0x80010106
 
+
+## Prerequisites
+
+* **Windows 10** Fall Creators Update
+* **JDK 9**
+* Apache **Ant**
+* **PowerShell** must be enabled and allowed to run scripts via `Settings ➔ For developers`.
+
+
 ## Test Case
 
 ```bash
