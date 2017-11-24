@@ -7,7 +7,7 @@ Exception in thread "Swing-Shell" java.lang.InternalError: Could not initialize 
 * **Windows 10** Fall Creators Update
 * **JDK 9**
 * Apache **Ant**
-* **PowerShell** must be enabled and allowed to run scripts via `Settings ➔ For developers`.
+* **PowerShell** must be enabled and allowed to run scripts via `Settings ➔ For developers`. `get-java.ps1` is used to fetch the latest JRE which is then bundled with the app in the `APPX` package.
 
 
 ## Test Case
