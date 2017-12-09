@@ -20,6 +20,7 @@
 
 		<!-- fetch JRE -->
 		<exec executable="powershell">
+			<arg line="–ExecutionPolicy Bypass" />
 			<arg line="./get-java.ps1" />
 		</exec>
 		<untar src="jre-9.0.1_windows-x64_bin.tar.gz" dest="dist/appx/jre" compression="gzip">
