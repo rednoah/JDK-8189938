@@ -12,7 +12,7 @@ Exception in thread "Swing-Shell" java.lang.InternalError: Could not initialize 
 
 
 ## Notes
-During the build `get-java.ps1` is used to fetch the latest JRE on first build. This may take a few minutes. This JRE is bundled with the APPX package.
+During the first build `get-java.ps1` is used to fetch the latest JRE. This may take a few minutes. This JRE is bundled with the APPX package.
 
 
 ## Test Case
