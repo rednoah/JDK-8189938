@@ -42,4 +42,4 @@ This will launch the sample application via the UWP Desktop Bridge. Clicking on 
 
 > It took much effort not to write what I'm thinking about VS 2013 right now.
 
-This strange bug has been [thoroughly investiaged](http://mail.openjdk.java.net/pipermail/swing-dev/2018-February/008323.html) by [Matthias Bläsing](https://github.com/matthiasblaesing) (Super Special Thanks!!). The solution is to [replace the Visual C++ runtime libraries](http://mail.openjdk.java.net/pipermail/swing-dev/2018-February/008351.html) included in JDK9 / VS2013 with patched ones.
+This strange bug has been [thoroughly investigated](http://mail.openjdk.java.net/pipermail/swing-dev/2018-February/008323.html) by [Matthias Bläsing](https://github.com/matthiasblaesing) (Super Special Thanks!!). The solution is to [replace the Visual C++ runtime libraries](http://mail.openjdk.java.net/pipermail/swing-dev/2018-February/008351.html) included in JDK9 / VS2013 with patched ones.
